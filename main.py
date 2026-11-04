@@ -56,6 +56,10 @@ def extract_boomplay_song_id(url: str) -> str | None:
         song_id = path_parts[1]
         if song_id.isdigit():
             return song_id
+        else:
+            print("Boomplay alphanumeric share Ids are not supported yet.")
+            print("Use a numeric song URL or check for an updated tool version.")
+            return None
     return None
 
 def encrypt(plaintext: str) -> str:
